@@ -1,7 +1,7 @@
 ---
 import Logo from "./Logo.astro";
 ---
-<header class="py-4 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white">
+<header id="js-landing-header" class="py-4 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white">
   <div class="flex flex-grow basis-0">
     <Logo />
   </div>
@@ -24,3 +24,26 @@ import Logo from "./Logo.astro";
     </ul>
   </nav>
 </header>
+<script>
+  const $header = document.querySelector('#js-landing-header') as HTMLElement;
+  const $sections = document.querySelectorAll('.landing-section') as NodeListOf<HTMLElement>;
+  const observerOptions = {
+    root: null, // defaults to the browser viewport if not specified or if null
+    rootMargin: '0px', // margin around the root. Values are similar to css property. Unitless values not allowed
+    threshold: 0.90 // visible amount of item shown in relation to root
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const { isIntersecting } = entry;
+      if(isIntersecting){
+        const color = entry.target.getAttribute('data-header-color');
+        $header.style.color = color;
+      }
+    })
+  }, observerOptions)
+
+  // observer.observe($header);
+  $sections.forEach(section => observer.observe(section));
+
+</script>
