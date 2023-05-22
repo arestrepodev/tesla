@@ -1,0 +1,12 @@
+---
+ import Section from './Section.astro';
+---
+<Section id="solar-roof" color="black" title="Solar Roof" subtitle="Produce Clean Energy From Your Roof" underlineSubtitle={false}>
+  <div class="flex gap-4 flex-wrap justify-center" slot="footer">
+    <a href="#" class="border-[3px] bg-gray-900 border-transparent rounded font-medium text-sm text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors">Order Now</a>
+    <a href="#" class="border-[3px] border-white bg-white rounded font-medium text-sm text-gray-900 px-12 py-2 inline-block hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-colors">Learn More</a>
+  </div>
+  <div class="absolute top-0 bottom-0 h-full w-full z-10" slot="background">
+    <img class="w-full h-full object-cover object-center" src="./solar-roof.avif" alt="Model Y">
+  </div>
+</Section>

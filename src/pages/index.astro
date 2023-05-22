@@ -3,19 +3,39 @@ import Layout from '../layouts/Layout.astro';
 import LandingHeader from "../components/LandingHeader.astro";
 import HeroSection from '../components/HeroSection.astro';
 import ModelY from '../components/ModelY.astro';
-import Section from '../components/Section.astro';
+import Model3 from '../components/Model3.astro';
+import ModelS from '../components/ModelS.astro';
+import ModelX from '../components/ModelX.astro';
+import SolarPanels from '../components/SolarPanels.astro';
+import SolarRoof from '../components/SolarRoof.astro';
+import Accessories from '../components/Accessories.astro';
 ---
 <Layout title="Tesla - Automomus Drive Car">
 	<LandingHeader />
 	<main class="snap-y snap-mandatory w-full overflow-auto relative scroll-smooth">
-		<div class="snap-center">
+		<div class="snap-center shrink-0">
 			<HeroSection/>
 		</div>
-		<div class="snap-center">
+		<div class="snap-center shrink-0">
+			<Model3 />
+		</div>
+		<div class="snap-center shrink-0">
 			<ModelY />
 		</div>
-		<div class="snap-center">
-			<ModelY />
+		<div class="snap-center shrink-0">
+			<ModelS />
+		</div>
+		<div class="snap-center shrink-0">
+			<ModelX />
+		</div>
+		<div class="snap-center shrink-0">
+			<SolarPanels />
+		</div>
+		<div class="snap-center shrink-0">
+			<SolarRoof />
+		</div>
+		<div class="snap-center shrink-0">
+			<Accessories />
 		</div>
 	</main>
 </Layout>

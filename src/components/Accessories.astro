@@ -1,0 +1,24 @@
+---
+ import Section from './Section.astro';
+---
+<Section id="accessories" color="black" title="Accessories" underlineSubtitle={false} isLastSection>
+  <div slot="footer">
+    <div>
+      <a href="#" class={`border-[3px] bg-gray-900 border-transparent rounded font-medium text-sm text-white px-12 py-2 inline-block`}>Shop Now</a>
+    </div>
+    <nav class="mt-5">
+      <ul class="list-none flex justify-center gap-x-4 text-[12px] [&>li>a]:text-gray-500 [&>li>a]:transition-colors">
+        <li><a href="#" class="hover:text-black">Tesla © 2023</a></li>
+        <li><a href="#" class="hover:text-black">Privacy & Legal</a></li>
+        <li><a href="#" class="hover:text-black">Vehicle Recalls</a></li>
+        <li><a href="#" class="hover:text-black">Contact</a></li>
+        <li><a href="#" class="hover:text-black">News</a></li>
+        <li><a href="#" class="hover:text-black">Get Updates</a></li>
+        <li><a href="#" class="hover:text-black">Location</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="absolute top-0 bottom-0 h-full w-full z-10" slot="background">
+    <img class="w-full h-full object-cover object-center" src="./accessories.avif" alt="Accessories">
+  </div>
+</Section>
