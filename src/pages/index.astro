@@ -2,16 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import LandingHeader from "../components/LandingHeader.astro";
 import HeroSection from '../components/HeroSection.astro';
-import ChargeSection from '../components/ChargeSection.astro';
+import ModelY from '../components/ModelY.astro';
+import Section from '../components/Section.astro';
 ---
 <Layout title="Tesla - Automomus Drive Car">
 	<LandingHeader />
 	<main class="snap-y snap-mandatory w-full overflow-auto relative scroll-smooth">
 		<div class="snap-center">
-			<HeroSection />
+			<HeroSection/>
 		</div>
 		<div class="snap-center">
-			<ChargeSection />
+			<ModelY />
+		</div>
+		<div class="snap-center">
+			<ModelY />
 		</div>
 	</main>
 </Layout>
